@@ -8,5 +8,8 @@ RUN install_packages gcc make
 ## https://github.com/aliyun/fluent-plugin-oss
 RUN fluent-gem install 'fluent-plugin-aliyun-oss'
 
+# default OSS SDK log directory
+RUN mkdir -p /var/log/td-agent/
+
 ## switch back to normal user
-USER 1001
+# USER 1001
